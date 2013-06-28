@@ -1,0 +1,180 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+#scene {
+	background: #000;
+	width: 640px; /* 40 tiles */
+	height: 480px; /* 30 tiles */
+	margin: 20px auto 0 auto;
+	overflow: hidden;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+#scene .layer, #scene #map .map {
+	width: 640px;
+	height: 480px;
+	z-index: 1;
+	position: absolute;
+
+}
+#scene #fade {
+	width: 640px;
+	height: 480px;
+	z-index: 1;
+	position: absolute;
+	background: black;
+	z-index: 99999;
+}
+
+#details {
+	width: 620px;
+	height: 16px;
+	padding: 10px;
+	background: #000;
+	margin: 0 auto;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top: 1px solid #ececec;
+	overflow: hidden;
+}
+
+#details .collection {
+	width: 150px;
+	float: left;
+}
+
+#details .action {
+	float: left;
+	position: absolute;
+	margin: 0 0 0 150px;
+	color: #999;
+	font-size: 13px;
+	text-shadow: 1px 1px #333;
+	width: 300px;
+	text-align: center;
+}
+#details .action span.hilite {
+	background: #999;
+	border-radius: 4px;
+	padding: 2px 4px;
+	color: #000;
+	text-shadow: 1px 1px #ccc;
+}
+#details .action span.dimmed {
+	font-style: italic;
+	color: #333;
+	text-shadow: 1px 1px #0c0c0c;
+}
+#details .countdown {
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	float: right;
+}
+
+/* Tiles */
+
+.tile {
+	width: 16px;
+	height: 16px;
+	/*float: left;*/
+	background-image: url(images/spritemap.png);
+	position: absolute;
+}
+
+.tile0 {background-position: -202px 0;}
+.tile1 {background-position: -306px -34px;}
+.tile2 {background-position: -314px -34px;}
+.tile3 {background-position: -306px -42px;}
+.tile4 {background-position: -314px -42px;}
+
+/* Grass ornaments */
+.tile5 {background-position: -289px -17px;} /* Bush */
+.tile6 {background-position: -272px -17px;} /* Bush cut */
+.tile7 {background-position: -202px -17px;} /* Dot */
+.tile8 {background-position: -314px -42px;}
+
+
+.tile9 {background-position: -255px -34px;} /* Sign post */
+
+.tile10 {background-position: -314px -42px;}
+.tile10 {background-position: -314px -42px;}
+.tile10 {background-position: -314px -42px;}
+.tile10 {background-position: -314px -42px;}
+
+/* Door */
+.tile20 {background-position: -275px -154px;}
+.tile21 {background-position: -275px -138px;}
+
+
+.player {
+	background: url(images/sprite_link_down.png) -48px 0 no-repeat;
+	width: 16px;
+	height: 24px;
+	position: absolute;
+	z-index: 1;
+	margin-top: -7px;
+	top: -100em;
+	dispaly: block;
+}
+.clone {background: url(images/sprite_clone_down.png) -48px 0 no-repeat;}
+
+
+#message {
+	border-radius: 10px;
+	border: 4px solid #ececec;
+	background: rgba(255,255,255,0.5);
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 1px 1px #333;
+	position: absolute;
+	width: 300px;
+	z-index: 10000;
+	padding: 10px;
+	text-align: center;
+	top: 360px;
+	margin-left: 156px;
+	display: none;
+	line-height: 15px;
+	font-weight: bold;
+}
+
+#message span.hilite {
+	background: #000;
+	border-radius: 4px;
+	padding: 2px 4px;
+}
+
+
+
+/* ======= */
+/* Objects */
+/* ======= */
+.object {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	z-index: 1;
+	margin-top: 0px;
+	top: -100em;
+	float: left;
+}
+.object_orb_1000 {background: url(images/orbs.png) 0 0 no-repeat;} /* Orb or Power*/
+.object_orb_1001 {background: url(images/orbs.png) -16px 0 no-repeat;} /* Orb of Courage*/
+.object_orb_1002 {background: url(images/orbs.png) -32px 0 no-repeat;} /* Orb of Wisdom*/
+
+
+
+#spotlight {
+	width: 1280px;
+	height: 960px;
+  z-index: 1001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 7px 0 0 7px;
+	background-image: -moz-radial-gradient(circle, transparent, #000 63px);
+	background-image: -webkit-radial-gradient(circle, transparent, #000 63px);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Caught in a Maze</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/jquery.sprite.min.js"></script>
+<script type="text/javascript" src="lib/jquery.timer.js"></script>
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript" src="maps.js"></script>
+</head>
+<body>
+	<div id="scene">
+		<div id="message"></div>
+		<div id="fade"></div>
+		<div id="spotlight"></div>
+		<div id="map" class="layer">
+			<div class="map"></div>
+		</div>
+		<div id="objects" class="layer">
+			<div id="player" class="player character"></div>
+			<div id="clone" class="player clone character"></div>
+			<div id="clone2" class="player clone character"></div>
+			<div id="clone3" class="player clone character"></div>
+		</div>
+	</div>
+	<div id="details">
+		<div class="collection"></div>
+		<div class="action"></div>
+		<div class="countdown">00:00:00</div>
+	</div>
+
+	<script type="text/javascript" src="engine.js"></script>
+</body>
+</html>
